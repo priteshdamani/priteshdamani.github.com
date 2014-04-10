@@ -7,4 +7,3 @@ tags: [computer science]
 ---
 {% include JB/setup %}
 
-**Hello World**
