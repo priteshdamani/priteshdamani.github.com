@@ -2,7 +2,7 @@
 layout: post
 title: "Hello World"
 description: ""
-category: 
+category: general
 tags: [concepts,computer_science]
 ---
 {% include JB/setup %}
