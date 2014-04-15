@@ -1,0 +1,21 @@
+---
+layout: post
+title: "hashtable"
+description: ""
+category: 
+tags: []
+---
+{% include JB/setup %}
+
+**Hashtable**
+
+Also known as Hashmap, is a datastructure that maps keys to values. It is probably one of the fastest ways to lookup an entity from a list of entity. Conceptually, things are pretty straightforward. When an entity is added to a hashtable, the hash function is run on this entity to generate a location/index in the array of buckets/slots within the hashtable. Theoritically, the hash function needs to generate a unique index per key/entity, however, in reality this is hardly the case. Hashtable implementations handle "collision" cases (a topic for another day).
+
+Complexity of lookup, inserts and deletes in an hashtable are O(1) given that the hashfunction calculation is constant time and lookup on the index is also constant time.
+
+However, memory consumption is sometimes a negative impact of hashtable. Memory is reserved for the indices in the hashtable and often times remains unused if collisions are high.
+
+Read more [here][1]
+
+
+  [1]: http://en.wikipedia.org/wiki/Hash_table
