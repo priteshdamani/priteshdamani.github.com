@@ -7,6 +7,7 @@
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js" type="text/javascript"></script>
     <script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js" type="text/javascript" ></script>
     <script src="http://jquery-bing-maps.googlecode.com/svn/trunk/js/min/jquery.ui.bmap.min.js" type="text/javascript" ></script>
+    <script src="purl.js" type="text/javascript" ></script>
     <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
 </head>
 <body>
@@ -75,7 +76,7 @@
 
     function getLocation()
     {
-        $('#loading').css('display','block');
+        $('#loading').show();
         if (navigator.geolocation)
         {
             navigator.geolocation.getCurrentPosition(showPosition);
@@ -87,8 +88,11 @@
     }
     function showPosition(position)
     {
-        //alert(position);
-        var location = new Microsoft.Maps.Location(position.coords.latitude,position.coords.longitude);
+        window.location = $.url().attr('source') + "?la=" + position.coords.latitude + "&lo=" +position.coords.longitude;
+    }
+
+    function plotPosition(location)
+    {
         $('#map').gmap('destroy');
         $('#map').gmap({
             'credentials': 'AhRxubf4Y88jMvqICLSXdhU93tUWt9EdUIbClkD2kbxHrEbRl40w6YBJsmneWa-v',
@@ -98,11 +102,11 @@
             'center':location
         });
         $('#map').gmap('addMarker', { 'location': location, 'bounds': false });
-        $('#actionButton').text('http://bit.ly/dfjlka');
+        $('#actionButton').text('Copy web address and send it!');
         $('#actionButton').removeClass('pomegranate-flat-button');
         $('#actionButton').addClass('emerald-flat-button');
         $('#actionButton').unbind( "click" );
-        $('#loading').css('display','none');
+        $('#loading').hide();
     }
 
     $(document).ready(function () {
@@ -112,10 +116,16 @@
             'showMapTypeSelector': false,
             'zoom':3
         });
-        $('#loading').css('display','none');
+        $('#loading').hide();
         $( "#actionButton" ).click(function() {
             getLocation();
         });
+        var la = $.url().param('la');
+        var lo = $.url().param('lo');
+        if (la && lo){
+            var location = new Microsoft.Maps.Location(la,lo);
+            plotPosition(location);
+        }
     });
 </script>
 
