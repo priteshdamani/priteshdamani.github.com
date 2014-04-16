@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "hashtable"
+title: "HashTable"
 description: ""
 category: 
 tags: []
