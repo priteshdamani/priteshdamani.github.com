@@ -45,7 +45,6 @@
         vertical-align: top;
         width: 200px;
         height: 25px;
-        left: 40%;
         padding: 10px 0 0 0;
         font-size: 15px;
         color: white;
@@ -101,6 +100,9 @@
             'showMapTypeSelector': false,
             'zoom':3
         });
+
+        var height = $(window).height();
+        var width = $(window).width();
 
         //getLocation();
     });
