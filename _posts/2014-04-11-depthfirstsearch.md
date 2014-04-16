@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "DepthFirstSearch"
+title: "Depth First Search"
 description: ""
 category: "algorithms"
 tags: [computer_science,algorithms]
