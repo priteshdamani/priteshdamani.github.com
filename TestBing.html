@@ -10,6 +10,66 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
 </head>
 <body>
+<style>
+    .button {
+        position:relative;
+        left: 40%;
+        margin-top:2%;
+    }
+
+    /* #Emerald Flat Button
+==================================================*/
+    .emerald-flat-button {
+        position: relative;
+        vertical-align: top;
+        width: 10%;
+        height: 20px;
+        padding: 0;
+        font-size: 12px;
+        color: white;
+        text-align: center;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+        background: #2ecc71;
+        border: 0;
+        border-bottom: 2px solid #28be68;
+        cursor: pointer;
+        -webkit-box-shadow: inset 0 -2px #28be68;
+        box-shadow: inset 0 -2px #28be68;
+    }
+    .emerald-flat-button:active {
+        top: 1px;
+        outline: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    /* #Pomegranate Flat Button
+==================================================*/
+    .pomegranate-flat-button {
+        position: relative;
+        vertical-align: top;
+        width: 10%;
+        height: 20px;
+        padding: 0;
+        font-size: 12px;
+        color: white;
+        text-align: center;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+        background: #c0392b;
+        border: 0;
+        border-bottom: 2px solid #b53224;
+        cursor: pointer;
+        -webkit-box-shadow: inset 0 -2px #b53224;
+        box-shadow: inset 0 -2px #b53224;
+    }
+    .pomegranate-flat-button:active {
+        top: 1px;
+        outline: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+</style>
 <script type="text/javascript">
 
     function getLocation()
@@ -46,10 +106,11 @@
             'zoom':3
         });
 
-        getLocation();
+        //getLocation();
     });
 </script>
 
 <div id="map" style="position: fixed; top: 0; right: 0; bottom: 0; left: 0;"></div>
+<input type="button" value="Get My Location" class="button pomegranate-flat-button" onclick="getLocation();">
 </body>
 </html>
