@@ -21,7 +21,7 @@
         height: 25px;
         padding: 10px 0 0 0;
         font-size: 15px;
-        color: white;
+        color: #000000;
         text-align: center;
         text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
         background: #2ecc71;
@@ -64,11 +64,19 @@
         box-shadow: none;
     }
 
+    .loading {
+        position: relative;
+        vertical-align: top;
+        padding: 10px 0 0 0;
+        left: 40%;
+    }
+
 </style>
 <script type="text/javascript">
 
     function getLocation()
     {
+        $('#loading').css('display','block');
         if (navigator.geolocation)
         {
             navigator.geolocation.getCurrentPosition(showPosition);
@@ -95,6 +103,7 @@
         $('#actionButton').removeClass('pomegranate-flat-button');
         $('#actionButton').addClass('emerald-flat-button');
         $('#actionButton').unbind( "click" );
+        $('#loading').css('display','none');
     }
 
     $(document).ready(function () {
@@ -104,6 +113,7 @@
             'showMapTypeSelector': false,
             'zoom':3
         });
+        $('#loading').css('display','none');
         $( "#actionButton" ).click(function() {
             getLocation();
         });
@@ -112,5 +122,6 @@
 
 <div id="map" style="position: fixed; top: 0; right: 0; bottom: 0; left: 0;"></div>
 <div id="actionButton" class="pomegranate-flat-button">Get My Location</div>
+<img id="loading" src="loader.gif" class="loading" />
 </body>
 </html>
