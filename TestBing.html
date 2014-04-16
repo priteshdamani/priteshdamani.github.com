@@ -27,7 +27,15 @@
     {
         //alert(position);
         var location = new Microsoft.Maps.Location(position.coords.latitude,position.coords.longitude);
-        $('#map').gmap('addMarker', { 'location': location, 'bounds': true });
+        $('#map').gmap('destroy');
+        $('#map').gmap({
+            'credentials': 'AhRxubf4Y88jMvqICLSXdhU93tUWt9EdUIbClkD2kbxHrEbRl40w6YBJsmneWa-v',
+            'mapTypeId': Microsoft.Maps.MapTypeId.road,
+            'showMapTypeSelector': false,
+            'zoom':15,
+            'center':location
+        });
+        $('#map').gmap('addMarker', { 'location': location, 'bounds': false });
     }
 
     $(document).ready(function () {
