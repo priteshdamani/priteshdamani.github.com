@@ -5,7 +5,7 @@ tagline: Supporting tagline
 ---
 {% include JB/setup %}
 
-One Computer Science Concept A Day!
+Computer Science Concept For All!
 
 <ul class="posts">
   {% for post in site.posts %}
