@@ -2,8 +2,8 @@
 layout: post
 title: "Heuristic function"
 description: ""
-category: 
-tags: []
+category: "concepts"
+tags: [concepts,computer_science]
 ---
 {% include JB/setup %}
 

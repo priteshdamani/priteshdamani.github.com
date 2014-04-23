@@ -2,8 +2,8 @@
 layout: post
 title: "HashTable"
 description: ""
-category: 
-tags: []
+category: "data_structures"
+tags: [data_structures,computer_science]
 ---
 {% include JB/setup %}
 
