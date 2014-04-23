@@ -2,7 +2,7 @@
 layout: post
 title: "Depth First Search"
 description: ""
-category: "algorithms"
+category: algorithms
 tags: [computer_science,algorithms]
 ---
 {% include JB/setup %}
