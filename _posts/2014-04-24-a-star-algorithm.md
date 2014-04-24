@@ -23,9 +23,8 @@ Now that you are ready! basically A* consists of
 
 One a given map of connected nodes/tiles, A* algorithm would go along the smallest value of F. Ofcourse there could be obstacles that would prohibit the passage on a tile/s.
 
-Here is a great video that explains this in further details.
-
-{% youtube Kw8AMmyc6vg %}
+Here is a great video that explains this in further details. [link][2]
 
 
   [1]: /concepts/2014/04/23/heuristic-function/
+  [2]: https://www.youtube.com/watch?v=Kw8AMmyc6vg
