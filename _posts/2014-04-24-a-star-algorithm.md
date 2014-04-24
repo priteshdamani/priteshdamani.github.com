@@ -6,7 +6,6 @@ category: algorithms
 tags: [computer_science,algorithms]
 ---
 {% include JB/setup %}
-
 **A* Algorithm**
 
 A Star is probably one of the most important and most used path find algorithms. Used in many destinations like online maps or even games!
