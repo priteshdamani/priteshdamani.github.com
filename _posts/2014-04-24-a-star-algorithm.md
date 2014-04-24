@@ -25,7 +25,7 @@ One a given map of connected nodes/tiles, A* algorithm would go along the smalle
 
 Here is a great video that explains this in further details.
 
-<iframe width="420" height="315" src="//www.youtube.com/embed/Kw8AMmyc6vg?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+&nbsp;<iframe width="420" height="315" src="//www.youtube.com/embed/Kw8AMmyc6vg" frameborder="0" allowfullscreen></iframe>
 
 
   [1]: /concepts/2014/04/23/heuristic-function/
